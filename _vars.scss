@@ -1,0 +1,42 @@
+//Variables
+
+$primary-color: #7a0d75;
+$color-primary: #7a0d75;
+$heading-color: #fff;
+$sub-heading-color: #f4f4f4;
+$body-color: #f4f4f4;
+$links-color: $heading-color;
+$links-color-hover:#19cbdd;
+
+//Fonts
+$body-font: Helvetica, sans-serif;
+
+
+//set text color based on background
+
+@function text-color($color){
+  @if(lightness($color) > 70){
+	@return #333;
+	} @else {
+	  @return #fff;
+	}
+}
+
+
+//set Bg and  text color based on color-primary
+
+@mixin background-color($color) {
+  background-color: $color;
+  color: text-color($color);
+}
+
+
+
+
+$steps: (1,2,3,4,5,6,7,8,9);
+
+@each $step in $steps {
+ .my-#{$step}{
+  margin: #{$step*10}px 0;
+}
+}

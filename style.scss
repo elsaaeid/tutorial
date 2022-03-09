@@ -1,0 +1,62 @@
+@import 'vars';
+@import 'utilities';
+@import 'buttons';
+
+
+body{
+    background-color: $body-color;
+    font-family: $body-font;
+    line-height: 1.6;
+    }
+    a{
+        text-decoration: none;
+        color: text-color($links-color);
+    }
+
+    .showcase{
+        @include  background-color($primary-color);
+        height: 600px;
+        padding: 15px 25px;
+
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+        ul{
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: center;
+    	align-items: center;
+
+            list-style-type: none;
+
+            li.nav-item {
+                display: inline-block;
+                padding: 0 14px;
+                float: right;
+
+                  a:hover{ 
+                    color: text-color($links-color-hover);
+                    font-weight: 800;
+                    float: right
+                    }
+            }
+        }
+
+        }
+    }
+
+        //showcase-content
+        
+        &-content{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img{
+        width: 50%;
+        }
+        }
+        
